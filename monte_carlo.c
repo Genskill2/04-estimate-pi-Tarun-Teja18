@@ -39,5 +39,14 @@ int main(void) {
   }
 }
 
-
-
+float mc_pi(int n) {
+	float ratio, count=0, x, y;
+	for(int i=0; i<n; i++) {
+		x = frandom();
+		y = frandom();
+		if(sqrt(pow(x,2)+pow(y,2)) < 1) {
+			count++;
+		}
+	}
+  return 4*(count/n);
+}
